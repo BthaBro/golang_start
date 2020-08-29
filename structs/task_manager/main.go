@@ -148,80 +148,50 @@ func (ts *Todos) ShowAllTodos() *Todos {
 	return ts
 }
 
-func EnterDetails(t *Todo) {
-	var day int
-	reader := bufio.NewReader(os.Stdin)
+// func EnterDetails(t *Todo) {
+// 	var day int
+// 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Println("Please, enter following details")
-	fmt.Println("Title: ")
-	title, _ := reader.ReadString('\n')
-	fmt.Println("Deadline is after how many days?: ")
-	fmt.Scanln(&day)
-	t.Title = title
-	t.ExpiresAt = time.Now().AddDate(0, 0, day)
-	t.CreatedAt = time.Now()
-}
+// 	fmt.Println("Please, enter following details")
+// 	fmt.Println("Title: ")
+// 	title, _ := reader.ReadString('\n')
+// 	fmt.Println("Deadline is after how many days?: ")
+// 	fmt.Scanln(&day)
+// 	t.Title = title
+// 	t.ExpiresAt = time.Now().AddDate(0, 0, day)
+// 	t.CreatedAt = time.Now()
+// }
 
-func EnterId(ts *Todos) int {
-	var id int
+// func EnterId(ts *Todos) int {
+// 	var id int
 
-	// Get id
-	fmt.Println("Please enter the id of the task you would like to change title: ")
-	fmt.Scanln(&id)
-	if id < len(ts.todos) {
-		return id
-	}
-	fmt.Println("ID doesn't exist in task list")
-	return -1
-}
+// 	// Get id
+// 	fmt.Println("Please enter the id of the task you would like to change title: ")
+// 	fmt.Scanln(&id)
+// 	if id < len(ts.todos) {
+// 		return id
+// 	}
+// 	fmt.Println("ID doesn't exist in task list")
+// 	return -1
+// }
 
-// Menu - outputs menu
-func Menu() {
-	fmt.Println("********************")
-	fmt.Println("Task Manager")
-	fmt.Println("********************")
-	fmt.Println("1. Add new task")
-	fmt.Println("2. Change title of task")
-	fmt.Println("3. Change status of task")
-	fmt.Println("4. Delete task")
-	fmt.Println("5. Show all tasks")
-	fmt.Println("6. Show not finished tasks")
-	fmt.Println("7. Show finished tasks")
-	fmt.Println("8. Show expired tasks")
-	fmt.Println("0. Exit")
-	fmt.Println("\nEnter your choice: ")
-}
+// // Menu - outputs menu
+// func Menu() {
+// 	fmt.Println("********************")
+// 	fmt.Println("Task Manager")
+// 	fmt.Println("********************")
+// 	fmt.Println("1. Add new task")
+// 	fmt.Println("2. Change title of task")
+// 	fmt.Println("3. Change status of task")
+// 	fmt.Println("4. Delete task")
+// 	fmt.Println("5. Show all tasks")
+// 	fmt.Println("6. Show not finished tasks")
+// 	fmt.Println("7. Show finished tasks")
+// 	fmt.Println("8. Show expired tasks")
+// 	fmt.Println("0. Exit")
+// 	fmt.Println("\nEnter your choice: ")
+// }
 
 func main() {
-	// 	var ts Todos
-	// 	var t Todo
-	// 	var i int
-
-	// F:
-	// 	for {
-	// 		Menu()
-	// 		fmt.Scanln(&i)
-
-	// 		switch i {
-	// 		case 1:
-	// 			ts.Add(&t)
-	// 		// case 2:
-	// 		// 	ts.ChangeTitle(&t]]\)
-	// 		case 3:
-	// 			ts.ChangeDone(&t)
-	// 		case 4:
-	// 			ts.Delete()
-	// 		case 5:
-	// 			ts.GetAllTodos()
-	// 		case 6:
-	// 			ts.ShowDoneTodos(false)
-	// 		case 7:
-	// 			ts.ShowDoneTodos(true)
-	// 		case 8:
-	// 			ts.ShowExpiredTodos()
-	// 		case 0:
-	// 			break F
-	// 		}
-	// 	}
 
 }

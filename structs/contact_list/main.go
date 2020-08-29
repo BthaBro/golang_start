@@ -63,67 +63,38 @@ func (cs *Contacts) ShowAllContacts() int {
 	return len(cs.contacts)
 }
 
-func Menu() {
-	fmt.Println("********************")
-	fmt.Println("Contact list Program")
-	fmt.Println("********************")
-	fmt.Println("1. Add new contact")
-	fmt.Println("2. Update existing contact")
-	fmt.Println("3. Delete existing contact")
-	fmt.Println("4. Show list of all existing contacts")
-	fmt.Println("0. Exit")
-	fmt.Println("\nEnter your choice: ")
-}
+// func Menu() {
+// 	fmt.Println("********************")
+// 	fmt.Println("Contact list Program")
+// 	fmt.Println("********************")
+// 	fmt.Println("1. Add new contact")
+// 	fmt.Println("2. Update existing contact")
+// 	fmt.Println("3. Delete existing contact")
+// 	fmt.Println("4. Show list of all existing contacts")
+// 	fmt.Println("0. Exit")
+// 	fmt.Println("\nEnter your choice: ")
+// }
 
-func EnterDetails(c *Contact) {
-	var fName, lName, ph string
-	var age int
+// func EnterDetails(c *Contact) {
+// 	var fName, lName, ph string
+// 	var age int
 
-	fmt.Println("Please, enter following details:")
-	fmt.Println("First Name: ")
-	fmt.Scanln(&fName)
-	fmt.Println("Last Name: ")
-	fmt.Scanln(&lName)
-	fmt.Println("Age: ")
-	fmt.Scanln(&age)
-	fmt.Println("Phone Number:")
-	fmt.Scanln(&ph)
+// 	fmt.Println("Please, enter following details:")
+// 	fmt.Println("First Name: ")
+// 	fmt.Scanln(&fName)
+// 	fmt.Println("Last Name: ")
+// 	fmt.Scanln(&lName)
+// 	fmt.Println("Age: ")
+// 	fmt.Scanln(&age)
+// 	fmt.Println("Phone Number:")
+// 	fmt.Scanln(&ph)
 
-	c.FirstName = fName
-	c.LastName = lName
-	c.Age = age
-	c.PhoneNumber = ph
-}
+// 	c.FirstName = fName
+// 	c.LastName = lName
+// 	c.Age = age
+// 	c.PhoneNumber = ph
+// }
 
 func main() {
-	// 	var cs Contacts
-	// 	var c Contact
-	// 	var i, id int
-
-	// F:
-	// 	for {
-	// 		Menu()
-	// 		fmt.Scanln(&i)
-
-	// 		switch i {
-	// 		case 1:
-	// 			EnterDetails(&c)
-	// 			cs.Add(&c)
-	// 		case 2:
-	// 			fmt.Println("Enter id of contact you would like to update: ")
-	// 			fmt.Scanln(&id)
-	// 			c.ID = id
-	// 			EnterDetails(&c)
-	// 			cs.Update(&c)
-	// 		case 3:
-	// 			fmt.Println("Enter id of contact you would like to delete: ")
-	// 			fmt.Scanln(&id)
-	// 			cs.Delete(id)
-	// 		case 4:
-	// 			cs.ShowAllContacts()
-	// 		case 0:
-	// 			break F
-	// 		}
-	// 	}
 
 }
