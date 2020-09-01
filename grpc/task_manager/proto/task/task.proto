@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/empty.proto";
+
+message Todo {
+    int64 id = 1;
+    string Title = 2;
+    int64 CreatedAt = 3;
+    int64 ExpiresAt = 4;
+    bool Done = 5;
+}
+
+message TodoId {
+    int64 id = 1;
+}
+
+message TodoString {
+    string title = 1;
+}
+
+message Todos {
+    repeated Todo todos = 1;
+}
+
+message Status {
+    string status = 1;
+}
+
+service TodoManager {
+    rpc Add(Todo) returns(Todo);
+	rpc UpdateTitle(Todo) returns(Status); 
+	rpc UpdateStatus(TodoId) returns(Status);
+	rpc Delete(TodoId) returns(Status);
+	rpc ShowAllTodos(google.protobuf.Empty) returns(Todos);
+	rpc ShowDoneTodos(google.protobuf.Empty) returns(Todos);
+}
